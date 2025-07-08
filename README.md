@@ -1,6 +1,4 @@
-# Dev Assessment - Webhook Receiver
-
-Please use this repository for constructing the Flask webhook receiver.
+This repository implements a server with a /webhook endpoint that receives POST requests from GitHub webhooks and stores the events in a MongoDB database. It also provides a /events endpoint that returns the stored events as JSON data, which is used by the frontend index.html page to display the events by polling every 15 seconds.
 
 *******************
 
@@ -41,8 +39,6 @@ python run.py
 ```bash
 POST http://127.0.0.1:5000/webhook/receiver
 ```
-
-You need to use this as the base and setup the flask app. Integrate this with MongoDB (commented at `app/extensions.py`)
 
 *******************
 
